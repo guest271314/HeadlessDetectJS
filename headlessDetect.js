@@ -69,7 +69,10 @@ class HeadlessDetect {
         }
     }
 
-
+    // Explicitly set width for Firefox MOZ_HEADLESS_WIDTH=999 firefox -headles URL
+    testMozHeadlesWidth() {
+      return screen.width === 999;
+    }
 
     //* Main Functions *//
 
@@ -94,4 +97,5 @@ class HeadlessDetect {
 
         return score / testsRun;
     }
+
 }
